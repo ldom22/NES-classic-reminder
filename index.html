@@ -10,9 +10,15 @@
 <body>
     
     <center>
-        <p id="text"></p>
+        <img src="nes.png">
+        <h1>
+        <h1 id="days" style="display:inline;clear:none;"></h1><b> days </b>
+        <h1 id="hour" style="display:inline;clear:none;"></h1><b> hours </b>
+        <h1 id="mins" style="display:inline;clear:none;"></h1><b> minutes </b>
+        <h1 id="secs" style="display:inline;clear:none;"></h1><b> seconds </b>
+        until launch
+        </h1>
     </center>
-    
     
     <!-- Begin MailChimp Signup Form -->
     <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
@@ -44,7 +50,10 @@
         var secs = Math.floor(diff / (1000));
         diff = diff - secs * (1000);
         
-        document.getElementById("text").innerHTML = days + " days " + hours + " hours " + mins + " mins " + secs + " secs";
+        document.getElementById("days").innerHTML = days;
+        document.getElementById("hour").innerHTML = hours;
+        document.getElementById("mins").innerHTML = mins;
+        document.getElementById("secs").innerHTML = secs;
         setTimeout(go, 1);
     }
     go();
